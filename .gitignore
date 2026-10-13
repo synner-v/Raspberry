@@ -1,0 +1,16 @@
+# Ejecutables compilados (el resultado de tu gcc)
+programa_pwm
+*.exe
+*.out
+
+# Archivos objeto y librerías estáticas generadas por el compilador
+*.o
+*.obj
+*.a
+*.lib
+
+# Archivos temporales de editores de código (como VS Code, CLion, etc.)
+.vscode/
+.idea/
+*.swp
+.DS_Store
