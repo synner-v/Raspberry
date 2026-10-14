@@ -2,9 +2,7 @@
 #include "pwm_lib.h"
 
 int main(void) {
-    // 10,000,000 ns = 10 ms (100 Hz)
     unsigned long periodo = 10000000; 
-    // 5,000,000 ns = 5 ms (50% Ciclo de trabajo)
     unsigned long duty = 5000000;     
 
     printf("Configurando PWM...\n");
