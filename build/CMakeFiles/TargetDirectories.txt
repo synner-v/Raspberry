@@ -1,0 +1,3 @@
+/home/synner/Raspberry/Brazo/build/CMakeFiles/brazo.dir
+/home/synner/Raspberry/Brazo/build/CMakeFiles/edit_cache.dir
+/home/synner/Raspberry/Brazo/build/CMakeFiles/rebuild_cache.dir
