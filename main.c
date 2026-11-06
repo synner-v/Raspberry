@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <pigpio.h>
 
 #define PULSO_MIN  500      // us = 0 grados
@@ -44,10 +45,11 @@ int main(void)
     printf("w/d: par sube  s/a: par baja  i/k: base  j/l: pinza  x: salir\n");
     mostrarAngulos();
 
+    system("stty -icanon -echo");   // lee teclas sin Enter y sin eco
+
     while (salir == 0)
     {
-        // Lee solo el primer caracter de la linea
-        if (scanf(" %c%*[^\n]", &tecla) == 1)
+        if (scanf(" %c", &tecla) == 1)
         {
             switch (tecla)
             {
@@ -67,6 +69,8 @@ int main(void)
             mostrarAngulos();
         }
     }
+
+    system("stty icanon echo");     // regresa la terminal a la normalidad
 
     gpioServo(PIN_BASE, 0);
     gpioServo(PIN_HOMBRO, 0);
